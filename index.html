@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Forritunarkeppni Grunnskólanna</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+	<link rel="stylesheet" href="assets/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	<div class="container">
+		<nav class="navBar">
+			<ul class="navContainer" id="navBar">
+				<a class="navLink smoothScroll" href="#intro"><li class="navItem">Heim</li></a>
+				<a class="navLink smoothScroll" href="#about"><li class="navItem">Um Keppnina</li></a>
+				<a class="navLink smoothScroll" href="#rules"><li class="navItem">Keppnisreglur</li></a>
+				<a class="navLink smoothScroll" href="#preperation"><li class="navItem">Upphitun</li></a>
+				<a class="navLink smoothScroll" href="#signup"><li class="navItem">Skráning</li></a>
+				<li></li>
+			</ul>
+		</nav>
+		<a href=""></a>
+		<div id="intro" class="page">
+			<div class="name">Forritunarkeppni Grunnskólanna</div>
+		</div>
+		<div id="about" class="spacer"></div>
+		<div class="page about">
+			<div class="title">Hvað er Forritunarkeppni Grunnskólanna?</div>
+		</div>
+		<div id="rules"  class="spacer"></div>
+		<div class="page rules">
+			<div class="title">Reglur Keppninnar</div>
+			
+		</div>
+		<div id="preperation" class="spacer"></div>
+		<div class="page preperation">
+			<div class="title">Upphitun fyrir Keppnina</div>
+			<div></div>
+		</div>
+		<div id="signup" class="spacer"></div>
+		<div class="page signup">
+			<div class="title">Hefur þú áhuga? Skráðu þig!</div>
+			
+		</div>
+	</div>
+	<script>
+	//Hér koma nokkrar breytir fyrir mismunandi síðurnar
+	var signup = document.getElementsByClassName("signup");
+
+	var size = $('#navBar').height();
+	var divider = document.getElementsByClassName("spacer");
+	for (var i = 0; i < divider.length; i++) {
+		divider[i].style.height = size + "px";
+	};
+	signup[0].style.height = window.innerHeight - size + "px";
+	</script>
+</body>
+</html>

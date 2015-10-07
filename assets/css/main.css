@@ -1,0 +1,86 @@
+
+@font-face {font-family: roboto;src: url(../fonts/roboto/Roboto-Regular.ttf);}
+@font-face {font-family: robotoLight;src: url(../fonts/roboto/Roboto-Light.ttf);}
+@font-face {font-family: robotoThin;src: url(../fonts/roboto/Roboto-Thin.ttf);}
+@font-face {font-family: geometos;src: url(../fonts/geometos/Geometos.ttf);}
+.navBar{
+	position: fixed;
+	display: block;
+	width:100%;
+	background-color: white;
+}
+.navContainer{
+	display: flex;
+  	justify-content: space-between;
+    left:0;
+    right:0;
+    margin: 0 auto;
+	width:800px;
+	font-family: roboto;
+}
+.navLink{
+	color:#39A0ED;
+	padding: 20px 0;
+	text-align: center;
+	display: block;
+	width:100%;
+	border-bottom: 3px solid transparent;
+	background-color: transparent;
+	transition:background 0.3s;
+	transition:color 0.3s;
+	transition:border 0.3s;
+}
+.navLink:hover{
+	border-bottom: 3px solid rgba(6,119,205, 1);
+	color:rgba(6,119,205, 1);
+	background-color: rgba(6,119,205, 0.07);
+}
+.navItem{
+	display: inline-block;
+}
+.page{
+	height: 100vh;
+}
+#intro{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	color:#39A0ED;
+}
+/*Block sem sér um að stíla mismunadi síðurnar*/
+#about{
+	background-color: #39A0ED;
+	color:white;
+}
+.about{
+	background-color: #39A0ED;
+	color:white;
+}
+.rules{
+	color:#39A0ED;
+}
+#preperation{
+	background-color: #39A0ED;
+}
+.preperation{
+	background-color: #39A0ED;
+	color:white;
+}
+.signup{
+	color:#39A0ED;
+}
+/*Síðublock lokið*/
+.name{
+	text-align: center;
+	font-size: 4em;
+	font-family: geometos;
+}
+.title{
+	padding-top: 2%;
+	text-align: center;
+	font-size: 2em;
+	font-family: geometos
+}
+@media only screen and (max-width:53.125em) { 
+	
+}
