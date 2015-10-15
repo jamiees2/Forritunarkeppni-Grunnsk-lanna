@@ -1,8 +1,8 @@
 
 @font-face {font-family: roboto;src: url(../fonts/roboto/Roboto-Regular.ttf);}
 @font-face {font-family: robotoLight;src: url(../fonts/roboto/Roboto-Light.ttf);}
-@font-face {font-family: robotoThin;src: url(../fonts/roboto/Roboto-Thin.ttf);}
 @font-face {font-family: geometos;src: url(../fonts/geometos/Geometos.ttf);}
+@font-face {font-family: openSans;src: url(../fonts/openSans/OpenSans-Regular.ttf);}
 .navBar{
 	position: fixed;
 	display: block;
@@ -83,4 +83,124 @@
 }
 @media only screen and (max-width:53.125em) { 
 	
+}
+/*Hérna koma stýlar eingögnu fyrir formið*/
+.form-input{
+	display: block;
+	width:96%;
+	border:0;
+	font-size: 1.5em;
+	background-color: #39A0ED;
+	padding:2%;
+	color:white;
+	font-family: robotoLight;
+	margin:2%;
+}
+.form-input:focus{
+	outline: 0;
+}
+.formContainer{
+	width:800px;
+	margin: 5% auto;
+}
+#go{
+	margin:0 2%;
+	display: block;
+	border:0;
+	font-size: 1.5em;
+	background-color: #39A0ED;
+	padding:2%;
+	color:white;
+	font-family: robotoLight;
+	margin:2%;
+}
+#go:hover{
+	background-color: #0677CD;
+}
+#go:focus{
+	outline: 0;
+}
+#go:active{
+	background-color: #034273;
+}
+/**/
+::-webkit-input-placeholder {
+   color: #DCDCDC;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #DCDCDC;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #DCDCDC;  
+}
+
+:-ms-input-placeholder {  
+   color: #DCDCDC;  
+}
+/*Custom radio buttons eru versta krabbameinið*/
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  font-family: robotoLight;
+  font-size: 1.5em;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label span {
+  background-color: #DCDCDC;
+}
+
+input[type="radio"]:checked + label span {
+  background-color: white;
+  color:white;
+}
+/*Þetta eru meiri stýlar fyrir radiotakka*/
+.labelControl{
+	display: inline-block;
+	color:#DCDCDC;
+	vertical-align: middle;
+	/*padding-top: 3px;*/
+}
+.radioContainerContainer{
+	display: block;
+	width:96%;
+	border:0;
+	font-size: 1em;
+	background-color: #39A0ED;
+	padding:2%;
+	color:white;
+	font-family: robotoLight;
+	margin:2%;
+	display: flex;
+	justify-content:space-around;
+}
+.radioContainer{
+	display: inline-block;
+}
+
+/*Hér eru sér stýlar fyrir efni á síðuni*/
+.contentContainer{
+	width:800px;
+	margin:2% auto 0;
+	font-family: openSans;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+.important{
+	color: black;
+	/*font-style: italic;*/
+	/*text-decoration: underline;*/
 }
