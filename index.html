@@ -11,18 +11,24 @@
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script>
-	$(document).ready(function(){
-		$("#go").on('click', function() {
+	//nota ajax til þess að senda gögn yfir í PHP skjalið
+	$(document).ready(function(){//set allt dæmið í document ready function
+		$("#go").on('click', function() {//þegar að það er ýtt á réttan takka keyrir dæmið
+			//allar breytur sem eru sendar yfir í PHP skjalið skilgreindar
 			var name = $('#name').val();
 			var kennitala = $('#kennitala').val();
 			var grade = $('#grade').val();
 			var school = $('#school').val();
 			var email = $('#email').val();
+			//tek inn valin radio button úr formi með id form
 			var size = $('input[name=size]:checked', '#form').val();
+			//resetta formið eftir að breyturnar eru teknar inn
 			document.getElementById("form").reset();
+			//ajax functioninn
 			$.ajax({
-				type: "POST",
-				url: "assets/php/SaveUser.php",
+				type: "POST",//nota POST
+				url: "assets/php/SaveUser.php",//targetta PHP skránna
+				//data object sem er sendur í PHP skjalið
 				data: {
 					name:name,
 					kennitala:kennitala,
@@ -31,8 +37,9 @@
 					email:email,
 					size:size
 				},
+				//ef að allt gengur vel, keyrir þetta
 				success: function(data){
-					alert(data);
+					alert(data);//set út data sem alert
 				}
 			});
 		});
@@ -60,7 +67,7 @@
 			<div class="title">Hvað er Forritunarkeppni Grunnskólanna?</div>
 			<div class="contentContainer">
 				<p>
-					Forritunarkeppni Grunnskólanna er ný á nálunum frá Tækniskólanum í Reykjavík.Keppnin fer fram í Upplysingatækniskóla Tækniskólans í Reykjavík frá <span class="important">4. og 5. mars 2016.</span>
+					Forritunarkeppni Grunnskólanna er ný á nálunum frá Tækniskólanum í Reykjavík.Keppnin fer fram í Upplysingatækniskóla Tækniskólans í Reykjavík frá <span class="important">4. til 5. mars 2016.</span>
 				</p><br>
 				<p>
 					Keppnin er sett upp þannig að Grunnskólanemar hafa til <span class="important">31. janúar </span>til að skrá sig og eftir að skráningu er lokið mun eiga sér stað forkeppni, sem er ætluð til þess að sjá hvar keppendur standa og skipta þeim síðan eftir því upp í deildir. Síðan mun aðalkeppnin eiga sér stað frá <span class="important">4. og 5. mars 2016.</span> þar sem að hver og ein deild getur keppt sín á milli upp á allskyns frábær verðlaun.
@@ -109,6 +116,7 @@
 					Ef eitthverjar spurningar vakna er hægt að hafa samband við <span class="important">Gongúler Helsibongersson</span> með því að senda tölvupóst á <span class="important">gonguler@gmail.com</span> eða hringja í síma <span class="important">581-2345</span>
 				</p>
 			</div>
+			<!-- Placeholder texti generataður með BuzzwordIpsum -->
 		</div>
 		<div id="signup" class="spacer"></div>
 		<div class="page signup">
@@ -120,6 +128,7 @@
 	            	<input type="text" class="form-input" id="grade" placeholder="Bekkur">   
 	            	<input type="text" class="form-input" id="school" placeholder="Skóli">
 	            	<input type="text" class="form-input" id="email" placeholder="Tölvupóstfang">
+	            	<!-- Brutal pain að stýla radio takka -->
 	            	<div class="radioContainerContainer">
 						<div class="radioContainer">
 							<input type="radio" id="xxs" value="XXS" name="size">
@@ -152,11 +161,11 @@
 	            	</div>
 	        	</form>
 	        	<button id="go">Skráðu mig!</button>
+	        	<!-- Takki sem triggerað JS -->
 			</div>
 		</div>
 	</div>
 	<script>
-	//Hér koma nokkrar breytir fyrir mismunandi síðurnar
 	var signup = document.getElementsByClassName("signup");
 
 	var size = $('#navBar').height();
@@ -165,8 +174,8 @@
 		divider[i].style.height = size + "px";
 	};
 	signup[0].style.height = window.innerHeight - size + "px";
-
-	//Stýlar fyrir radio buttons
+	//stilli hæðir á elementum sem liggja á milli síðna til þess að búa til pláss fyrir nav barinn
+	//stilli hæðina sem jafnt hæð nav barsins
 	</script>
 </body>
 </html>

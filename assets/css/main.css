@@ -1,14 +1,16 @@
-
+/*Tek inn öll fontin*/
 @font-face {font-family: roboto;src: url(../fonts/roboto/Roboto-Regular.ttf);}
 @font-face {font-family: robotoLight;src: url(../fonts/roboto/Roboto-Light.ttf);}
 @font-face {font-family: geometos;src: url(../fonts/geometos/Geometos.ttf);}
 @font-face {font-family: openSans;src: url(../fonts/openSans/OpenSans-Regular.ttf);}
+/*Læt nav barinn vera kyrran efst og ná yfir allan skjáinn*/
 .navBar{
 	position: fixed;
 	display: block;
 	width:100%;
 	background-color: white;
 }
+/*stilli container navlinkanna*/
 .navContainer{
 	display: flex;
   	justify-content: space-between;
@@ -18,6 +20,7 @@
 	width:800px;
 	font-family: roboto;
 }
+/*stilli stýla á navlinkum*/
 .navLink{
 	color:#39A0ED;
 	padding: 20px 0;
@@ -38,16 +41,19 @@
 .navItem{
 	display: inline-block;
 }
+/*Set hæð hverrar síðu sem fulla hæð sjáins. Þetta fokkar upp í símum, mun laga það seinna*/
 .page{
 	height: 100vh;
 }
+
+
+/*Block sem sér um að stíla mismunadi síðurnar*/
 #intro{
 	display: flex;
     flex-direction: column;
     justify-content: center;
 	color:#39A0ED;
 }
-/*Block sem sér um að stíla mismunadi síðurnar*/
 #about{
 	background-color: #39A0ED;
 	color:white;
@@ -70,6 +76,7 @@
 	color:#39A0ED;
 }
 /*Síðublock lokið*/
+/*Stýlar fyrir aðal nafnið*/
 .name{
 	text-align: center;
 	font-size: 4em;
@@ -81,8 +88,9 @@
 	font-size: 2em;
 	font-family: geometos
 }
-@media only screen and (max-width:53.125em) { 
-	
+
+@media only screen and (max-width:810px) { 
+	/*Góður staður fyrir breakpoint*/
 }
 /*Hérna koma stýlar eingögnu fyrir formið*/
 .form-input{
@@ -123,7 +131,7 @@
 #go:active{
 	background-color: #034273;
 }
-/**/
+/*Stýlar sem sjá um að breyta litnum á placeholder texta*/
 ::-webkit-input-placeholder {
    color: #DCDCDC;
 }
@@ -143,12 +151,12 @@
 input[type="radio"] {
   display: none;
 }
-
+/*Hide-a alla radio takka*/
 input[type="radio"] + label {
   font-family: robotoLight;
   font-size: 1.5em;
 }
-
+/*stýlar fyrir labels á radio tökkum*/
 input[type="radio"] + label span {
   display: inline-block;
   width: 30px;
@@ -158,15 +166,17 @@ input[type="radio"] + label span {
   cursor: pointer;
   border-radius: 50%;
 }
-
+/*Færi span tagið yfir radio takkan*/
 input[type="radio"] + label span {
   background-color: #DCDCDC;
 }
-
+/*stilli default bakrunnslit á radio tökkum*/
 input[type="radio"]:checked + label span {
   background-color: white;
   color:white;
 }
+/*Stilli stýla á cheked radio takka*/
+
 /*Þetta eru meiri stýlar fyrir radiotakka*/
 .labelControl{
 	display: inline-block;
@@ -192,7 +202,7 @@ input[type="radio"]:checked + label span {
 }
 
 /*Hér eru sér stýlar fyrir efni á síðuni*/
-.contentContainer{
+.contentContainer{ /**/
 	width:800px;
 	margin:2% auto 0;
 	font-family: openSans;

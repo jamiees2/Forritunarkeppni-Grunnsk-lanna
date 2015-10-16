@@ -1,5 +1,5 @@
 <?php
-
+//cancerous code is sponsored by Benni Potato
 //Sækjir breyturnar sem þarf
 require('db.php');
 $Nafn = $_POST["name"];
