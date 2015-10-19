@@ -77,6 +77,14 @@
 }
 /*Síðublock lokið*/
 /*Stýlar fyrir aðal nafnið*/
+.logo {
+
+}
+.logo img {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
 .name{
 	text-align: center;
 	font-size: 4em;
@@ -209,8 +217,11 @@ input[type="radio"]:checked + label span {
 	font-size: 1.2em;
 	line-height: 1.5em;
 }
+.contentContainer p {
+    margin-top: 10px;
+}
 .important{
-	color: black;
+	color: #333;
 	/*font-style: italic;*/
 	/*text-decoration: underline;*/
 }
