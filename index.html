@@ -5,47 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="Eyþór Máni Steinarsson">
 	<title>Forritunarkeppni Grunnskólanna</title>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
 	<link rel="stylesheet" href="assets/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<script>
-	//nota ajax til þess að senda gögn yfir í PHP skjalið
-	$(document).ready(function(){//set allt dæmið í document ready function
-		$("#go").on('click', function() {//þegar að það er ýtt á réttan takka keyrir dæmið
-			//allar breytur sem eru sendar yfir í PHP skjalið skilgreindar
-			var name = $('#name').val();
-			var kennitala = $('#kennitala').val();
-			var grade = $('#grade').val();
-			var school = $('#school').val();
-			var email = $('#email').val();
-			//tek inn valin radio button úr formi með id form
-			var size = $('input[name=size]:checked', '#form').val();
-			//resetta formið eftir að breyturnar eru teknar inn
-			document.getElementById("form").reset();
-			//ajax functioninn
-			$.ajax({
-				type: "POST",//nota POST
-				url: "assets/php/SaveUser.php",//targetta PHP skránna
-				//data object sem er sendur í PHP skjalið
-				data: {
-					name:name,
-					kennitala:kennitala,
-					grade:grade,
-					school:school,
-					email:email,
-					size:size
-				},
-				//ef að allt gengur vel, keyrir þetta
-				success: function(data){
-					alert(data);//set út data sem alert
-				}
-			});
-		});
-		
-	});
-	</script>
 </head>
 <body>
 	<div class="container">
@@ -70,7 +32,7 @@
 			<div class="title">Hvað er Forritunarkeppni Grunnskólanna?</div>
 			<div class="contentContainer">
 				<p>
-					<span class="important">Forritunarkeppni Grunnskólanna</span> er ný forritunarkeppni þar sem grunnskólanemendur hópast saman og nýta þekkingu sína á tölvum og tölvuforritun til að leysa skemmtileg verkefni til að vinna geðveik verðlaun! Ef þú hefur einhvern áhuga á forritun er þetta alveg örugglega keppni fyrir þig. 
+					<span class="important">Forritunarkeppni Grunnskólanna</span> er ný forritunarkeppni þar sem grunnskólanemendur hópast saman og nýta þekkingu sína á tölvum og tölvuforritun til að leysa skemmtileg verkefni og reyna að vinna geðveik verðlaun! Ef þú hefur einhvern áhuga á forritun er þetta alveg örugglega keppni fyrir þig. 
 				</p>
 				<p>
 					Keppnin er fyrir <span class="important">alla nemendur</span> í grunnskólum landsins og er hugsuð bæði fyrir þá sem hafa 
@@ -106,7 +68,7 @@
 					Vikuna <span class="important">8. - 14. febrúar 2016</span> verður <em>forkeppni</em> þar sem keppendur leysa áhugaverð verkefni og senda inn lausnir sínar. Niðurstöðurnar úr þeirri keppni verða svo notaðar til að skipta upp í deildir og við að gera dæmi. Þessi keppni verður á netinu, og er því auðveldlega aðgengileg. Öllum er velkomið að prófa að spreyta sig á þessum dæmum.
 				</p>
 				<p>
-					Skráningin í aðalkeppnina er svo til á <span class="important">Mánudaginn 29.febrúar 2016</span>.
+					Skráningin í aðalkeppnina er svo til þann <span class="important">29.febrúar 2016</span>.
 				</p>
 				<p>
 					Aðalkeppnin verður haldin <span class="important">4. - 5. mars 2016</span> í aðstöðu Upplýsingatækniskólans í Vörðuskóla. Þar munu grunnskólanemendur koma saman og reyna við dæmi sem reyna á kunnáttu þeirra á tölvur og tölvuforritun. Að lokum verður svo verðlaunaafhending þar sem bestu liðin í hverri deild verða verðlaunuð.
@@ -167,6 +129,9 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/smoothscroll.js"></script>
 	<script>
 	var signup = document.getElementsByClassName("signup");
 
@@ -178,6 +143,43 @@
 	signup[0].style.height = window.innerHeight - size + "px";
 	//stilli hæðir á elementum sem liggja á milli síðna til þess að búa til pláss fyrir nav barinn
 	//stilli hæðina sem jafnt hæð nav barsins
+	</script>
+
+	<script>
+	//nota ajax til þess að senda gögn yfir í PHP skjalið
+	$(document).ready(function(){//set allt dæmið í document ready function
+		$("#go").on('click', function() {//þegar að það er ýtt á réttan takka keyrir dæmið
+			//allar breytur sem eru sendar yfir í PHP skjalið skilgreindar
+			var name = $('#name').val();
+			var kennitala = $('#kennitala').val();
+			var grade = $('#grade').val();
+			var school = $('#school').val();
+			var email = $('#email').val();
+			//tek inn valin radio button úr formi með id form
+			var size = $('input[name=size]:checked', '#form').val();
+			//resetta formið eftir að breyturnar eru teknar inn
+			document.getElementById("form").reset();
+			//ajax functioninn
+			$.ajax({
+				type: "POST",//nota POST
+				url: "assets/php/SaveUser.php",//targetta PHP skránna
+				//data object sem er sendur í PHP skjalið
+				data: {
+					name:name,
+					kennitala:kennitala,
+					grade:grade,
+					school:school,
+					email:email,
+					size:size
+				},
+				//ef að allt gengur vel, keyrir þetta
+				success: function(data){
+					alert(data);//set út data sem alert
+				}
+			});
+		});
+		
+	});
 	</script>
 </body>
 </html>
